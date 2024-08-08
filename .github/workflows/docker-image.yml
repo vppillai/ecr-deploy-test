@@ -48,11 +48,11 @@ jobs:
           container-name: test-dev-repo
           image: ${{ steps.build-image.outputs.image }}
 
-      - name: Deploy Amazon ECS task definition
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-        with:
-          task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: test-repo-service
-          cluster: DevCluster1
-          wait-for-service-stability: true
+#      - name: Deploy Amazon ECS task definition
+#        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+#        with:
+#          task-definition: ${{ steps.task-def.outputs.task-definition }}
+#          service: test-repo-service
+#          cluster: DevCluster1
+#          wait-for-service-stability: true
           
